@@ -1,9 +1,8 @@
 package main
 
 import (
+	"ModificadoresAccesoStructs/src/mypackage"
 	"fmt"
-
-	"github.com/JCarlosCantu13/golang_workshop/ModificadoresAccessoStructs/src/mypackage"
 )
 
 func main() {
