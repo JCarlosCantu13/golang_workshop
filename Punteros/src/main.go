@@ -16,6 +16,10 @@ func (myPC *pc) duplicateRAM() {
 	myPC.ram *= 2
 }
 
+func updateBrand(myPc *pc) {
+	myPc.brand = "Acer"
+}
+
 func main() {
 
 	fmt.Println("Como declarar un puntero")
@@ -54,7 +58,8 @@ func main() {
 	fmt.Println(a)
 
 	fmt.Println()
-	fmt.Println("Ejemplo 4")
+	fmt.Println("Ejemplo 4 valores por referencia en funciones")
+
 	myPc := pc{ram: 16, disk: 200, brand: "apple"}
 	fmt.Println(myPc)
 	myPc.ping()
@@ -62,4 +67,12 @@ func main() {
 	fmt.Println("Estado actual", myPc.ram)
 	myPc.duplicateRAM()
 	fmt.Println("Estado despues de duplicar", myPc.ram)
+
+	fmt.Println()
+	fmt.Println("Ejemplo 5 Punteros en estructuras")
+
+	fmt.Println("Marca Actual", myPc.brand)
+	updateBrand(&myPc)
+	fmt.Println("Marca Actualizada", myPc.brand)
+
 }
